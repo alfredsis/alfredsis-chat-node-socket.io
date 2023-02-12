@@ -23,8 +23,9 @@ const socketController = (socket, io) => {
            
         }
         console.log(user.apodo);
-        // chatMensajes.desconectarUsuario(socket.id);
+       
         io.emit('desconectar-usuario', user.apodo); 
+        chatMensajes.desconectarUsuario(socket.id);
 
     });
 
